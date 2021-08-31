@@ -39,6 +39,22 @@ module.exports = () => ({
     }),
     new (require('html-webpack-plugin'))({
       template: require.resolve('./index.html')
+    }),
+    new (require('webpack/lib/container/ModuleFederationPlugin'))({
+      name: 'foo',
+      filename: 'remoteEntry.js',
+      remotes: {
+        '@module-federation/foo': 'foo@/remoteEntry.js'
+      },
+      shared: {
+        'react': {
+          eager: true,
+          singleton: true
+        }
+      },
+      exposes: {
+        './Foo': './src/foo'
+      }
     })
   ]
 });

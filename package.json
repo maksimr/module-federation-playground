@@ -9,6 +9,9 @@
     "test:type": "tsc",
     "lint": "eslint src/"
   },
+  "dependencies": {
+    "react": "17.0.2"
+  },
   "devDependencies": {
     "typescript": "4.4.2",
     "@babel/core": "7.15.0",
