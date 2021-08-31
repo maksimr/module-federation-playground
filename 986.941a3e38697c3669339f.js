@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkplayground=self.webpackChunkplayground||[]).push([[986],{986:(n,u,r)=>{r.r(u),r.d(u,{foo:()=>o});var e=r(418),a=r.n(e);function o(){return a()}}}]);
